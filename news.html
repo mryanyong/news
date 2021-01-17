@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
+<meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' >
+</head>
+<link rel="stylesheet" type="text/css" href="fixbar.css">
+<link rel="stylesheet" type="text/css" href="notify.css">
+<script type="text/javascript" src="news.js"></script>
+<body>
+<div id=scr1></div>
+<script>
+p=new makediv("notify");
+p=new makediv("top-bar");
+p=new makediv("content");
+p=new makediv("bottom-bar");
+
+
+		tim=5000;
+  	    setInterval(function(){news("content");},tim);
+		tim=1000;
+		setInterval(function(){
+			b=clockb("top-bar",1);		
+			b=clockb("bottom-bar",2);
+		},tim);		
+		tim=8000;
+		tim2=10000;
+		setInterval(function(){notify("notify","Hello");	},tim2);
+		setInterval(function(){loadDoc2();	},tim);
+
+notify("notify","BING");	
+</script>
+<style>
+#scr1 {
+position:fixed;
+background-color:pink;
+top:100px;
+left:50px;
+width:300px;
+height:200px;
+overflow:auto;
+}
+</style>
